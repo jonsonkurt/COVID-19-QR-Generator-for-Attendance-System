@@ -1,0 +1,268 @@
+<Check1@MDCheckbox>:
+    group: 'group1'
+    size_hint: None, None
+    size: dp(48), dp(48)
+	theme_text_color: "Custom"
+	selected_color: rgba('#C0DEE5')
+
+<Check2@MDCheckbox>:
+    group: 'group2'
+    size_hint: None, None
+    size: dp(48), dp(48)
+	theme_text_color: "Custom"
+	selected_color: rgba('#C0DEE5')
+
+<Check3@MDCheckbox>:
+    group: 'group3'
+    size_hint: None, None
+    size: dp(48), dp(48)
+	theme_text_color: "Custom"
+	selected_color: rgba('#C0DEE5')
+
+<Check4@MDCheckbox>:
+    group: 'group4'
+    size_hint: None, None
+    size: dp(48), dp(48)
+	theme_text_color: "Custom"
+	selected_color: rgba('#C0DEE5')
+
+<HealthDeclarationScreen>
+	Widget:
+		canvas:
+			Color:
+				rgba: rgba('#C0DEE5')
+			Rectangle:
+				size: self.size
+				pos: self.pos
+    FloatLayout:
+		pos_hint: {'center_y': 0.65, 'center_x': 0.5}
+		size_hint: 8, 0.6
+		FloatLayout:
+			pos_hint: {'center_y': 0.9, 'center_x': 0.5}
+			size_hint: 8, 0.2
+			Image:
+				pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+				source: 'Media/QR_Attendance_Logo.png'
+				size_hint_x: 0.04
+				allow_stretch: False
+	FloatLayout:
+		pos_hint: {'center_y': 0.4, 'center_x': 0.5}
+		size_hint: 1, 0.8
+		canvas:
+			Color:
+				rgba: rgba('#07575B')
+			RoundedRectangle:
+				radius: [40,40,0,0]
+				size: self.size
+				pos: self.pos
+		MDLabel:
+            text: ('[font=Fonts/Roboto-Black]Health Declaration[/font]')
+            halign: 'center'
+            font_size: '20dp'
+            markup: True
+			halign: "center"
+			theme_text_color: 'Custom'
+            text_color: rgba('#C0DEE5')
+            pos_hint: {'center_x': 0.5, 'center_y' : 0.93}
+		MDLabel:
+            text: ('[font=Fonts/Roboto-Black]No[/font]')
+            halign: 'center'
+            font_size: '12dp'
+            markup: True
+			halign: "center"
+			theme_text_color: 'Custom'
+            text_color: rgba('#C0DEE5')
+            pos_hint: {'center_x': 0.9, 'center_y' : 0.83}
+		MDLabel:
+            text: ('[font=Fonts/Roboto-Black]Yes[/font]')
+            halign: 'center'
+            font_size: '12dp'
+            markup: True
+			halign: "center"
+			theme_text_color: 'Custom'
+            text_color: rgba('#C0DEE5')
+            pos_hint: {'center_x': 0.8, 'center_y' : 0.83}
+# Question 1
+		MDFloatLayout:
+			Check1:
+				id: ans_yes1
+				active: False
+				on_active: root.on_checkbox_active1(*args)
+				pos_hint: {'center_x': .8, 'center_y': .75}
+				unselected_color: rgba("#FFFFFF")
+			Check1:
+				id: ans_no1
+				active: True
+				pos_hint: {'center_x': .9, 'center_y': .75}
+				unselected_color: rgba("#FFFFFF")
+		FloatLayout:
+			pos_hint: {'center_y': 0.75, 'center_x': 0.4}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]Have you been exposed to a confirmed \
+					case of COVID-19 in the past 14 days?[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+		FloatLayout:
+			pos_hint: {'center_y': 0.70, 'center_x': 0.5}
+			size_hint: .8, 0.003
+			canvas:
+				Color:
+					rgba: rgba('#FFFFFF')
+				Rectangle:
+					size: self.size
+					pos: self.pos
+# Question 2
+		MDFloatLayout:
+			Check2:
+				id: ans_yes2
+				active: False
+				on_active: root.on_checkbox_active2(*args)
+				pos_hint: {'center_x': .8, 'center_y': .65}
+				unselected_color: rgba("#FFFFFF")
+			Check2:
+				id: ans_no2
+				active: True
+				pos_hint: {'center_x': .9, 'center_y': .65}
+				unselected_color: rgba("#FFFFFF")
+		FloatLayout:
+			pos_hint: {'center_y': 0.65, 'center_x': 0.4}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]Have you been sick (cough, difficulty \
+					breathing, colds, sore throat, fever) in the past 14 days?[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+		FloatLayout:
+			pos_hint: {'center_y': 0.60, 'center_x': 0.5}
+			size_hint: .8, 0.003
+			canvas:
+				Color:
+					rgba: rgba('#FFFFFF')
+				Rectangle:
+					size: self.size
+					pos: self.pos
+# Question 3
+		MDFloatLayout:
+			Check3:
+				id: ans_yes3
+				active: False
+				on_active: root.on_checkbox_active3(*args)
+				pos_hint: {'center_x': .8, 'center_y': .55}
+				unselected_color: rgba("#FFFFFF")
+			Check3:
+				id: ans_no3
+				active: True
+				pos_hint: {'center_x': .9, 'center_y': .55}
+				unselected_color: rgba("#FFFFFF")
+		FloatLayout:
+			pos_hint: {'center_y': 0.55, 'center_x': 0.4}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]Have you worked together or stayed in \
+					the same close environment of a confirmed COVID 19 case?[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+		FloatLayout:
+			pos_hint: {'center_y': 0.50, 'center_x': 0.5}
+			size_hint: .8, 0.003
+			canvas:
+				Color:
+					rgba: rgba('#FFFFFF')
+				Rectangle:
+					size: self.size
+					pos: self.pos
+# Question 4
+		MDFloatLayout:
+			Check4:
+				id: ans_yes4
+				active: False
+				on_active: root.on_checkbox_active4(*args)
+				pos_hint: {'center_x': .8, 'center_y': .45}
+				unselected_color: rgba("#FFFFFF")
+			Check4:
+				id: ans_no4
+				active: True
+				pos_hint: {'center_x': .9, 'center_y': .45}
+				unselected_color: rgba("#FFFFFF")
+		FloatLayout:
+			pos_hint: {'center_y': 0.45, 'center_x': 0.4}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]Have you had any contact with anyone \
+					with fever, cough, colds, andsore throat in the past two weeks?[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+		FloatLayout:
+			pos_hint: {'center_y': 0.40, 'center_x': 0.5}
+			size_hint: .8, 0.003
+			canvas:
+				Color:
+					rgba: rgba('#FFFFFF')
+				Rectangle:
+					size: self.size
+					pos: self.pos
+# Temperature
+		MDLabel:
+            text: ('[font=Fonts/Roboto-Black]TEMPERATURE[/font]')
+            halign: 'center'
+            font_size: '20dp'
+            markup: True
+			theme_text_color: 'Custom'
+            text_color: rgba('#C0DEE5')
+            pos_hint: {'center_x': 0.5, 'center_y' : 0.32}
+		MDTextFieldRound:
+			id: temp
+			text_color: rgba('#C0DEE5')
+			hint_text: "36.5"
+			size_hint: (0.15, 0.06)
+            font_size: "10dp"
+			pos_hint: {'center_x' : 0.5, 'center_y' : 0.24}
+			normal_color: rgba('#FFFFFF')
+			color_active: rgba('#C0DEE5')
+			line_color: rgba('#C0DEE5')
+# Submit
+		MDFillRoundFlatButton:
+			text: '[font=Fonts/Roboto-Bold][color=#07575B]        Submit        [/color][/font]'
+			markup: True
+			md_bg_color: rgba('#C0DEE5')
+            font_size: "15dp"
+			pos_hint: {'center_x' : 0.5, 'center_y' : 0.1}
+			on_press:
+                root.manager.transition.direction = 'right'
+                root.manager.transition.duration = .3
+                root.manager.current = '#'
+	MDIconButton:
+		icon: "arrow-left-bold-circle"
+		user_font_size: "25sp"
+		theme_text_color: "Custom"
+		text_color: rgba('#07575B')
+		pos_hint: {'center_x' : 0.1, 'center_y' : 0.95}
+		on_press:
+			root.manager.current = "generate"
+			root.manager.transition.direction = "left"
+			root.manager.transition.duration = .3
