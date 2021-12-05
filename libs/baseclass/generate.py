@@ -20,7 +20,3 @@ class GenerateScreen(Screen):
             return toast('Please update your information.')
         else:
             self.manager.current = "health_declaration"
-
-    def generate(self):
-
-        pass
