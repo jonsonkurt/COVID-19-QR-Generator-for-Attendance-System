@@ -45,7 +45,7 @@
             text_color: rgba('#C0DEE5')
             pos_hint: {'center_x': 0.6, 'center_y' : 0.77}
 		MDTextFieldRound:
-			id: full_name
+			id: full_name_id
 			hint_text: 'Enter Your Full Name Here'
 			text_color: rgba('#C0DEE5')
 			size_hint: (0.75, None)
@@ -63,7 +63,7 @@
             text_color: rgba('#C0DEE5')
             pos_hint: {'center_x': 0.6, 'center_y' : 0.63}
 		MDTextFieldRound:
-			id: course_section
+			id: course_section_id
 			hint_text: 'Enter Your Course and Section Here'
 			text_color: rgba('#C0DEE5')
 			size_hint: (0.75, None)
@@ -81,7 +81,7 @@
             text_color: rgba('#C0DEE5')
             pos_hint: {'center_x': 0.6, 'center_y' : 0.49}
 		MDTextFieldRound:
-			id: student_number
+			id: student_number_id
 			hint_text: 'Enter Your Student Number Here'
 			text_color: rgba('#C0DEE5')
 			size_hint: (0.75, None)
@@ -99,7 +99,7 @@
             text_color: rgba('#C0DEE5')
             pos_hint: {'center_x': 0.6, 'center_y' : 0.35}
 		MDTextFieldRound:
-			id: contact_number
+			id: contact_number_id
 			hint_text: 'Enter Your Contact Number Here'
 			text_color: rgba('#C0DEE5')
 			size_hint: (0.75, None)
@@ -117,7 +117,8 @@
 			on_press:
                 root.manager.transition.direction = 'right'
                 root.manager.transition.duration = .3
-                root.manager.current = '#'
+                root.update_information(full_name_id.text, course_section_id.text, \
+				student_number_id.text, contact_number_id.text)
 	MDIconButton:
 		icon: "arrow-left-bold-circle"
 		user_font_size: "25sp"
