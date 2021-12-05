@@ -1,7 +1,7 @@
 from kivymd.app import MDApp
 from kivy.lang.builder import Builder
 
-from libs.baseclass import generate, help, information, update, healthdeclaration
+from libs.baseclass import generate, help, information, healthdeclaration
 
 # this class serves as the main class that runs the system
 class MyApp(MDApp):
