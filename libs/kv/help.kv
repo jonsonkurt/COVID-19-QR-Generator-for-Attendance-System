@@ -27,6 +27,7 @@
 				radius: [40,40,0,0]
 				size: self.size
 				pos: self.pos
+
 		MDLabel:
             text: ('[font=Fonts/Roboto-Black]Help[/font]')
             halign: 'center'
@@ -36,6 +37,139 @@
 			theme_text_color: 'Custom'
             text_color: rgba('#C0DEE5')
             pos_hint: {'center_x': 0.5, 'center_y' : 0.93}
+
+		MDLabel:
+			text: ('[font=Fonts/Roboto-Black]Step 1:[/font]')
+            halign: 'left'
+            font_size: '20dp'
+            markup: True
+			theme_text_color: 'Custom'
+            text_color: rgba('#C0DEE5')
+            pos_hint: {'center_x': 0.55, 'center_y' : 0.81}
+
+		FloatLayout:
+			pos_hint: {'center_y': 0.81, 'center_x': 0.62}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]First, click the edit your information, and \
+					fill up the following required information given in the form.[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+
+		MDLabel:
+			text: ('[font=Fonts/Roboto-Black]Step 2:[/font]')
+            halign: 'left'
+            font_size: '20dp'
+            markup: True
+			theme_text_color: 'Custom'
+            text_color: rgba('#cbe4e9')
+            pos_hint: {'center_x': 0.55, 'center_y' : 0.70}
+		
+		FloatLayout:
+			pos_hint: {'center_y': 0.70, 'center_x': 0.62}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]After you fill-up the form, you can now  \
+					click the generate QR code button ;[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+		
+		MDLabel:
+			text: ('[font=Fonts/Roboto-Black]Step 3:[/font]')
+            halign: 'left'
+            font_size: '20dp'
+            markup: True
+			theme_text_color: 'Custom'
+            text_color: rgba('#cbe4e9')
+            pos_hint: {'center_x': 0.55, 'center_y' : 0.60}
+		
+		FloatLayout:
+			pos_hint: {'center_y': 0.60, 'center_x': 0.62}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]After step 2 you will be redirected to the health declaration page \
+					to answer some questions along with your given temperature.[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+
+		MDLabel:
+			text: ('[font=Fonts/Roboto-Black]Step 4:[/font]')
+            halign: 'left'
+            font_size: '20dp'
+            markup: True
+			theme_text_color: 'Custom'
+            text_color: rgba('#cbe4e9')
+            pos_hint: {'center_x': 0.55, 'center_y' : 0.50}
+
+		FloatLayout:
+			pos_hint: {'center_y': 0.50, 'center_x': 0.62}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]Click the submit button after you fill up the form \
+					and the application will display the generated QR code in you screen.[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.5, 'center_y' : 0.5}
+		
+		MDLabel:
+			text: ('[font=Fonts/Roboto-Black]Note:[/font]')
+            halign: 'left'
+            font_size: '20dp'
+            markup: True
+			theme_text_color: 'Custom'
+            text_color: rgba('#CBE4E9')
+            pos_hint: {'center_x': 0.65, 'center_y' : 0.25}
+		
+		FloatLayout:
+			pos_hint: {'center_y': 0.17, 'center_x': 0.62}
+			size_hint: .65, 0.075
+			MDLabel:
+			    text:
+					('[font=Fonts/Roboto-Medium]Failure to meet the set requirement will not  \
+					be accepted by the app and will not generate the QR Code.[/font]')
+			    halign: 'center'
+			    font_size: '10dp'
+			    markup: True
+				halign: "justify"
+				theme_text_color: 'Custom'
+			    text_color: rgba('#C0DEE5')
+			    pos_hint: {'center_x': 0.28, 'center_y' : 0.5}
+
+	# Vertical line separation
+	FloatLayout:
+		pos_hint: {'center_y': 0.5, 'center_x': 0.25}
+		size_hint: 0.006, 0.4
+		canvas:
+			Color:
+				rgba: rgba('#cbe4e9')
+			RoundedRectangle:
+				radius: [0,0,0,0]
+				size: self.size
+				pos: self.pos
+
 	MDIconButton:
 		icon: "arrow-left-bold-circle"
 		user_font_size: "25sp"
