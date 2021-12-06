@@ -84,7 +84,7 @@ class HealthDeclarationScreen(Screen):
             toast("You have not meet the requirement to enter this facility") 
         else:
             img = qrcode.make(str(info[3]) + ";" + str(info[1])+ ";" + str(q1[-1])+ ";" + str(q2[-1])+ ";" + \
-                str(q3[-1])+ ";" + str(q4[-1])+ ";"  + str(stud_temp) + ";" + now.strftime('%Y/%m/%d')+ ";" + now.strftime('%I:%M:%S'))
+                str(q3[-1])+ ";" + str(q4[-1])+ ";"  + str(stud_temp) + ";" + now.strftime('%Y/%m/%d')+ ";" + now.strftime('%H:%M:%S'))
             img.save(str(info[3]) + "-" + str(info[1]) + '.jpg')
             file_name = str(info[3]) + "-" + str(info[1])
             qr_name.append(file_name)
