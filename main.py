@@ -1,7 +1,11 @@
 from kivymd.app import MDApp
 from kivy.lang.builder import Builder
+from kivy.core.window import Window
 
 from libs.baseclass import generate, help, information, healthdeclaration
+
+Window.keyboard_anim_args = {'d': .2, 't': 'in_out_expo'}
+Window.softinput_mode = 'below_target'
 
 # this class serves as the main class that runs the system
 class MyApp(MDApp):
