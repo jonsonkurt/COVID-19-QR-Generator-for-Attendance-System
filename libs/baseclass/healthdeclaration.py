@@ -23,7 +23,7 @@ class Content(BoxLayout):
     def source_name(self):
         if len(qr_name) != 0:
             image_name = qr_name[-1]
-            final_name = f"{image_name}.jpg"
+            final_name = f"{image_name}.png"
             return(final_name)
         else:
             return 'Media/QR_Attendance_Logo.png'
@@ -83,9 +83,10 @@ class HealthDeclarationScreen(Screen):
         elif (q1[-1] in ans) or (q2[-1] in ans) or (q3[-1] in ans) or (q4[-1] in ans):
             toast("You have not meet the requirement to enter this facility") 
         else:
+            qrcode.QRCode(version=1,box_size=40,border=2,)
             img = qrcode.make(str(info[3]) + ";" + str(info[1])+ ";" + str(q1[-1])+ ";" + str(q2[-1])+ ";" + \
                 str(q3[-1])+ ";" + str(q4[-1])+ ";"  + str(stud_temp) + ";" + now.strftime('%Y/%m/%d')+ ";" + now.strftime('%H:%M:%S'))
-            img.save(str(info[3]) + "-" + str(info[1]) + '.jpg')
+            img.save(str(info[3]) + "-" + str(info[1]) + '.png')
             file_name = str(info[3]) + "-" + str(info[1])
             qr_name.append(file_name)
             conn.close()

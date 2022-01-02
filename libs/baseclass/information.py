@@ -12,7 +12,8 @@ class InformationScreen(Screen):
 
         conn = sqlite3.connect("mybase.db")
         cur = conn.cursor()
-
+	 
+        cur.execute("CREATE TABLE IF NOT EXISTS information(id_num integer PRIMARY KEY, full_name VARCHAR(30), course_section VARCHAR(30), student_number VARCHAR(30), contact_number VARCHAR(30))")
         cur.execute("SELECT * FROM information")
         results = cur.fetchall()
 
