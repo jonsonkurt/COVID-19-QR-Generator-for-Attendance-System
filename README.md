@@ -8,10 +8,10 @@ Link for the COVID-19 QR Attendance System (Desktop Application): https://github
 
 Screenshots from the Application:
 
-https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/login_page_mobile.jpg
+![image](https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/login_page_mobile.jpg)
 
-https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/information_page_mobile.jpg
+![image](https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/information_page_mobile.jpg)
 
-https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/health_declaration_page_mobile.jpg
+![image](https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/health_declaration_page_mobile.jpg)
 
-https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/help_page_mobile.jpg
+![image](https://github.com/jonsonkurt/COVID-19-QR-Generator-for-Attendance-System/blob/master/Screenshots/help_page_mobile.jpg)
